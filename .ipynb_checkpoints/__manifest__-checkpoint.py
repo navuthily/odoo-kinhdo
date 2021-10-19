@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Odoo kinh-do",
-    'summary': """Odoo kinh-do""",
+    'name': "My pet (+) - minhng.info",
+    'summary': """My pet plus""",
     'description': """Managing pet information""",
-    'author': "na",
-    'website': "https://odoo-kinhdo",
+    'author': "minhng.info",
+    'website': "https://minhng.info",
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': [
@@ -12,7 +12,8 @@
     ],
     'data': [
         'security/ir.model.access.csv',
-        'views/quotation_views.xml',
+        'views/my_pet_plus_views.xml',
+        'views/product_pet_views.xml',
     ],
     # 'qweb': ['static/src/xml/*.xml'],
     'installable': True,
