@@ -1,1 +1,1 @@
-from . import model_quotation
+from . import sale_quotation

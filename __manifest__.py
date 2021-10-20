@@ -2,13 +2,13 @@
 {
     'name': "Odoo kinh-do",
     'summary': """Odoo kinh-do""",
-    'description': """Managing pet information""",
+    'description': """Managing sale information""",
     'author': "na",
     'website': "https://odoo-kinhdo",
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': [
-        'mypet',
+        'sale',
     ],
     'data': [
         'security/ir.model.access.csv',
