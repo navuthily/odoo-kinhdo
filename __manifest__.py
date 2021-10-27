@@ -10,11 +10,11 @@
     'depends': ['base',"mail","product", "sale","purchase"],
     'demo': [],
     'data': [
-        'security/ir.model.access.csv',
-        "views/client.xml",
-        "views/product.xml",
-        "views/product_type.xml",
-        "views/hop_dong.xml",
+         'security/ir.model.access.csv',
+         'views/client.xml',
+         'views/product.xml',
+         'views/product_type.xml',
+         'views/hop_dong.xml',
 
     ],
     'qweb': [],

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="purchase_order_form_view" model="ir.ui.view">
+            <field name="name">purchase.order.custom.form.view</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_ref" position="after">
+                    <field name="ten_hd"/>
+                    <field name="so_hd"/>
+
+                </field>
+                <field name="date_order" position="after">
+                    <field name="khach_hang"/>
+                    <field name="note"/>
+                </field>
+            </field>
+        </record>
+        <record id="action_mua_hang" model="ir.actions.act_window">
+            <field name="name">Báo giá</field>
+            <field name="res_model">purchase.order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form,pivot</field>
+        </record>
+
+
+        <menuitem action="action_mua_hang"
+                  id="menu_mua_hang"
+                  name="Báo giá"
+                  parent="menu_insurance_receive"
+                  sequence="1"/>
+    </data>
+</odoo>
