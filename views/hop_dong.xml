@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="contract_tree_view" model="ir.ui.view">
+            <field name="name">contract.tree.view</field>
+            <field name="model">contract</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="x_type_contract"/>
+                    <field name="x_number_contract"/>
+                    <field name="name"/>
+                    <field name="x_client"/>
+                    <field name="x_date_start"/>
+                    <field name="x_date_end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="contract_search_form_view" model="ir.ui.view">
+            <field name="name">contract.search.form</field>
+            <field name="model">contract</field>
+            <field name="arch" type="xml">
+                <search string="Hợp đồng">
+                    <field name="x_type_contract"/>
+                    <field name="x_number_contract"/>
+                    <field name="name"/>
+                    <field name="x_date_start"/>
+                    <field name="x_date_end"/>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="contract_form_view" model="ir.ui.view">
+            <field name="name">contract.form.view</field>
+            <field name="model">contract</field>
+            <field name="arch" type="xml">
+                <form string="Mới">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="x_type_contract"/>
+                                <field name="x_number_contract"/>
+                                <field name="name"/>
+                                <field name="x_client"/>
+                            </group>
+                            <group>
+                                <field name="x_date_start"/>
+                                <field name="x_date_end"/>
+                                <field name="x_content"/>
+                                <field name="x_currency"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_contract_view" model="ir.actions.act_window">
+            <field name="name">Hợp đồng</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contract</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                            (0, 0, {'view_mode': 'tree', 'view_id': ref('contract_tree_view')}),
+                            (0, 0, {'view_mode': 'form', 'view_id': ref('contract_form_view')})]"/>
+        </record>
+        <menuitem id="menu_contract_on_account"
+                  parent="menu_insurance_receive"
+                  name="Hợp đồng"
+                  action="action_contract_view"
+                  sequence="1"/>
+    </data>
+</odoo>
