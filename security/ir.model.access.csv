@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_client,access_client,model_client,base.group_user,1,1,1,1,
-access_product_type,access_product_type,model_product_type,base.group_user,1,1,1,1
-access_contract,access_contract,model_contract,base.group_user,1,1,1,1,

@@ -1,5 +1,2 @@
-from . import client
-from . import product
-from . import product_type
-from . import hop_dong
-from . import don_mua
+from . import res_partner
+from . import sale_order

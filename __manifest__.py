@@ -1,23 +1,18 @@
-# -*- coding: utf-8 -*-
 {
-    'name': 'Kinhdo-sale',
-    'version': '1.0',
-    'author': '',
-    'maintainer': '',
-    'website': '',
-
-    'description': """ """,
-    'depends': ['base',"mail","product", "sale","purchase"],
-    'demo': [],
-    'data': [
-         'security/ir.model.access.csv',
-         'views/client.xml',
-         'views/product.xml',
-         'views/product_type.xml',
-         'views/hop_dong.xml',
-
-    ],
-    'qweb': [],
+    'name': 'Kinh Do Sale Management',
+    'description': """
+       Description of Kinh Do sale management module
+    """,
+    'author': 'Na',
+    'summary': 'Summany of sale management module',
+    'version': '1.0.0',
+    'category': 'Sales/Sales',
+    'depends': ['sale','base'],
+    'data':
+        [
+            'views/res_partner_views.xml',
+            'views/sale_order_views.xml',
+        ],
+    'application': True,
     'installable': True,
-    'auto_install': False,
 }
