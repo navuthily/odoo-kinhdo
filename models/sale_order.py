@@ -14,8 +14,8 @@ class SaleOrder(models.Model):
     delivery_address = fields.Char(string='Địa điểm giao hàng')
     accumulated_point = fields.Integer(compute='_compute_accumulated_point', store=True)
 
-    def action_done(self):
-        super(SaleOrder, self).action_done()
+    def action_confirm(self):
         for order in self:
-            order.partner_id.accumulated_point += math.floor(order.amount_total/30000)
+            order.partner_id.accumulated_point += math.floor(order.amount_total / 30000)
+        return super(SaleOrder, self).action_confirm()
 
