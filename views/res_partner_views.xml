@@ -8,6 +8,9 @@
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="gender"/>
             </xpath>
+            <xpath expr="//field[@name='gender']" position="after">
+                <field name="date_of_birth"/>
+            </xpath>
             <xpath expr="//field[@name='category_id']" position="after">
                 <field name="accumulated_point"/>
             </xpath>
