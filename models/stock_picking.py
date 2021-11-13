@@ -12,4 +12,5 @@ class StockPicking(models.Model):
         ('save', 'Tiết kiệm'),
     ]
     shipper = fields.Many2one("res.partner", string = "Người giao hàng" )
-    shipping_type = fields.Selection(select_tyle, string='Phương thức vận chuyển', default=select_tyle[0][0])
+    shipping_type = fields.Selection(select_tyle,
+                                     string='Phương thức vận chuyển', default=select_tyle[0][0])
